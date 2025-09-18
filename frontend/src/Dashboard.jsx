@@ -54,6 +54,13 @@ const Dashboard = ({ stats }) => {
         <button className="btn-green" onClick={() => navigate("/images-only")}>
           View Dataset (Images Only)
         </button>
+        <button 
+          className="btn-robotics" 
+          onClick={() => navigate("/robotics")}
+          title="Access the AI-powered robotics system with trained models"
+        >
+          🤖 View AI Robotics System
+        </button>
       </div>
     </div>
   );

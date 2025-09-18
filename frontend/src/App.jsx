@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./index.css";
-import "./app.css";
+import "./App.css";
 import Dashboard from "./Dashboard";
 import Datasets from "./Datasets";
 import ImagesOnly from "./ImagesOnly";
+import Robotics from "./Robotics";
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
@@ -49,6 +50,7 @@ export default function App() {
         <nav>
           <Link className="dashboard-btn" to="/">Dashboard</Link>
           <Link className="dashboard-btn" to="/datasets">Datasets</Link>
+          <Link className="dashboard-btn" to="/robotics">AI Robotics</Link>
         </nav>
       </header>
 
@@ -56,6 +58,7 @@ export default function App() {
         <Route path="/" element={<Dashboard stats={stats} />} />
         <Route path="/datasets" element={<Datasets />} />
         <Route path="/images-only" element={<ImagesOnly />} />
+        <Route path="/robotics" element={<Robotics />} />
       </Routes>
     </Router>
   );
